@@ -23,8 +23,8 @@ public class SetName : MonoBehaviour
         {
             MainManager.Instance.bestScore = MainManager.Instance.score;
             MainManager.Instance.bestName = MainManager.Instance.name;
-            SetText();
         }
+        SetText();
     }
 
     public void SetText()

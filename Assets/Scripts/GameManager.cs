@@ -67,7 +67,6 @@ public class GameManager : MonoBehaviour
     void AddPoint(int point)
     {
         m_Points += point;
-        ScoreText.text = $"Score : {m_Points}";
         MainManager.Instance.score = m_Points;
     }
 
