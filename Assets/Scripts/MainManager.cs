@@ -7,7 +7,9 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
 
-    public string Name;
+    public string name;
+    public int score;
+    public int bestScore = 0;
 
     private void Awake()
     {
@@ -19,5 +21,11 @@ public class MainManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+    }
+
+    [System.Serializable]
+    class SaveData
+    {
+        public string playerName;
     }
 }
