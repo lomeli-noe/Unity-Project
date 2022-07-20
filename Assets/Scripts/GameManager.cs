@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject GameOverText;
+    public Button exitButton;
     
     private bool m_Started = false;
     private int m_Points;
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                MainManager.Instance.score = 0;
             }
         }
     }
@@ -73,5 +75,6 @@ public class GameManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        exitButton.gameObject.SetActive(true);
     }
 }

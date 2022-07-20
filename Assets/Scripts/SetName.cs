@@ -22,13 +22,14 @@ public class SetName : MonoBehaviour
         if (MainManager.Instance.score > MainManager.Instance.bestScore)
         {
             MainManager.Instance.bestScore = MainManager.Instance.score;
+            MainManager.Instance.bestName = MainManager.Instance.name;
             SetText();
         }
     }
 
     public void SetText()
     {
-        nameTextObj.text = ("Best Score : " + MainManager.Instance.name + " : " + MainManager.Instance.bestScore);
-        scoreTextObj.text = ("Score: " + MainManager.Instance.score);
+        nameTextObj.text = ("Best Score : " + MainManager.Instance.bestName + " : " + MainManager.Instance.bestScore);
+        scoreTextObj.text = ("Score: " + MainManager.Instance.name + " : " + MainManager.Instance.score);
     }
 }
