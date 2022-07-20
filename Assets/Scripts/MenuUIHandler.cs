@@ -33,4 +33,9 @@ public class MenuUIHandler : MonoBehaviour
                 Application.Quit(); // original code to quit Unity player
         #endif
     }
+
+    public void ReadString(string name)
+    {
+        MainManager.Instance.name = name;
+    }
 }
